@@ -1,3 +1,8 @@
+$Contacts = Import-CSV .\ExternalContacts.csv
+$contacts | ForEach {New-MailContact -Name $_.Name -DisplayName $_.Name -ExternalEmailAddress $_.ExternalEmailAddress -FirstName $_.FirstName -LastName $_.LastName}
+
+Alternatively:
+
 Import-Csv .\ExternalContacts.csv|%{New-MailContact -Name $_.Name -DisplayName $_.Name -ExternalEmailAddress $_.ExternalEmailAddress -FirstName $_.FirstName -LastName $_.LastName}
 
 Replace .\ExternalContacts.csv by your CSV File. Please be aware that your file has to be comma-separated, not semi-colon or tab-separated. 
