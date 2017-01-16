@@ -1,0 +1,17 @@
+Open Powershell as an administrator.
+
+Set-ExecutionPolicy RemoteSigned 
+(only needs to be done once on a particular PC - gives you the rights tu run external scripts).
+
+$UserCredential = Get-Credential
+(Login as an administrator to the respective Office 365 Acccount)
+
+$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
+
+Import-PSSession $Session
+
+[...] Your Code [...] 
+
+Remove-PSSession $Session
+
+Don't forget to close your session after your changes were proceeded!
