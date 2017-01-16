@@ -1,1 +1,4 @@
 Don't forget to close your connection!
+
+Remove-PSSession $Session
+(Assuming that you have used the variable $Session to open your session. Please adjust accordingly, if you have used a different variable.
