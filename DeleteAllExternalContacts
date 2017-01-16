@@ -1,0 +1,5 @@
+Connect to Office 365 using Powershell and run
+
+Get-Contact | Remove-MailContact
+
+This will delete ALL contacts from Office 365. It will delete no mailboxes, but only all entries in the contacts session of Office365.
