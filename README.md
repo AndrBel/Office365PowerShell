@@ -1,2 +1,2 @@
 # Office365PowerShell
-Routine for Office365 Powershell Connection
+Routines for Office365 Powershell Connection
